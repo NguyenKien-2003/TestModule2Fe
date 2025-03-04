@@ -62,20 +62,19 @@ function filterTasks(filter) {
     document.querySelectorAll(".tab").forEach(tab => tab.classList.remove("active"));
     document.getElementById(`tab-${filter}`).classList.add("active");
 
-    const tasks = document.querySelectorAll(".task");
-    tasks.forEach(task => {
+    document.querySelectorAll(".task").forEach(task => {
         const isCompleted = task.classList.contains("completed");
         
         if (filter === "all") {
             task.style.display = "flex";
-            task.querySelector(".delete-btn").style.display = "none";
-        } else if (filter === "completed" && !isCompleted) {
-            task.style.display = "none";
-        } else {
-            task.style.display = "flex";
-            task.querySelector(".delete-btn").style.display = filter === "completed" ? "inline" : "none";
+        } else if (filter === "active") {
+            task.style.display = isCompleted ? "none" : "flex";
+        } else { // "completed"
+            task.style.display = isCompleted ? "flex" : "none";
+            task.querySelector(".delete-btn").style.display = "inline";
         }
     });
+
     updateClearButtonVisibility();
 }
 
