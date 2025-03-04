@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="./style.css">
+    <link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+			integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+</head>
+<body>
+    <div class="todo-container">
+        <h2>#todo</h2>
+        <div class="tabs">
+            <button onclick="filterTasks('all')" id="tab-all" class="tab active">All</button>
+            <button onclick="filterTasks('active')" id="tab-active" class="tab">Active</button>
+            <button onclick="filterTasks('completed')" id="tab-completed" class="tab">Completed</button>
+        </div>
+        <div class="input-group">
+            <input type="text" id="todo-input" placeholder="Add details">
+            <button onclick="addTask()" class="add-btn">Add</button>
+        </div>
+        <ul id="todo-list"></ul>
+        <div class="delete-all-btn">
+        <button onclick="clearCompleted()" id="clear-btn" class="clear-btn" style="display: none;"> <i class="fa-solid fa-trash"></i>  delete all</button>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

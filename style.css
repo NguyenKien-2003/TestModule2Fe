@@ -1,0 +1,118 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+  }
+  
+  .todo-container {
+    width: 350px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  
+  .tab {
+    flex: 1;
+    padding: 8px ;
+    margin: 16px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-weight: bold;
+    color: #999;
+    transition: color 0.2s;
+  }
+  
+  .tab.active {
+    color: #000;
+    border-bottom: 3px solid #007bff;
+  }
+  
+  .input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  #todo-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .add-btn {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  #todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .task span {
+    cursor: pointer;
+  }
+  
+  .completed span {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
+  .clear-btn {
+    display: block;
+    font-size: 12px;
+    padding:  8px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .clear-btn:hover {
+    background-color: #cc0000;
+  }
+  .delete-btn{
+    background: none;
+    border: none;
+  }
+  .delete-all-btn{
+    display: flex;
+    justify-content: end;
+  }
