@@ -69,7 +69,6 @@ function filterTasks(filter) {
         if (filter === "all") {
             task.style.display = "flex";
             task.querySelector(".delete-btn").style.display = "none";
-            task.style.display = "none";
         } else if (filter === "completed" && !isCompleted) {
             task.style.display = "none";
         } else {
